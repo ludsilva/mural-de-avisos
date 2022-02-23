@@ -28,7 +28,7 @@ const updatePosts = () => {
             Deletar <i class="far fa-trash-alt pe-2" id='${post.id}' onclick="deletePosts(this)"></i> 
           </a>
           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Editar <i class="far fa-edit"></i>
+            Editar <i class="far fa-edit" id='${post.id}' onclick="editPosts(this)"></i>
           </button>
         </div>
       </div>
@@ -78,8 +78,21 @@ const deletePosts = (post) => {
 }
 
 const editPost = () => {
-  let title = document.getElementById('title').value;
-  let description = document.getElementById('description').value;
+  let title = document.getElementById('modalTitle');
+  let description = document.getElementById('modalDescription');
+  let id = {id: post.id};
 
-  
+ // usar o get para pegar os dados
+ const url = '/api/all';
+
+ fetch(url).then(response => {
+  return response.json();
+  }).then(json => {
+  let postElements = '';
+  let posts = JSON.parse(json);
+  })
+
+  posts.filter(post =>{
+    
+  })
 } 

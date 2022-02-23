@@ -30,7 +30,10 @@ router.delete("/delete", express.json(), (request, response)=> {
   response.send("Id deletado com sucesso");
 });
 
-//router.put("/update", (request, response) => {})
+router.put("/update", express.json(), (request, response) => {
+  let id = request.body.id;
+  posts.updatePost(id);
+})
 
 
 module.exports = router;

@@ -26,8 +26,8 @@ module.exports = {
     this.posts = this.posts.filter(el => el.id != id);
   },
 
-  updatePost(){
-
+  updatePost(id){
+    this.posts.id = this.posts.filter(el => el.id == id); //testar
   },
 }
 
@@ -35,7 +35,3 @@ const generateId = () => {
   return Math.random().toString(36).substring(2); //0 a 36 = alfabeto + numeros no valor
   //Id iniciando no indice 2 da string gerada
 }
-
-/* const removePostById = (id) => {
-  
-} */
