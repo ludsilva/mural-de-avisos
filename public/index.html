@@ -10,24 +10,67 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   
   <!--Fonts / Icons-->
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+>>>>>>> fe6c570 (Atualizando arquivos)
   <script src="https://kit.fontawesome.com/f8c1079784.js" crossorigin="anonymous"></script>
   <title>Mural de Avisos</title>
 </head>
 <body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid py-3">
       <a class="navbar-brand" href="#">
-        <i class="far fa-sticky-note d-inline-block align-text-top pe-1"></i>
+        <i class="bi bi-megaphone d-inline-block align-text-top pe-1"></i>
         <span class="navbar-brand mb-0 h1">Mural de Avisos</span>
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Mural de Avisos</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Contato</a>
+          </li>
+        </ul>
+      </div>
     </div>
+    
   </nav>
 
-  <div class="container px-4 py-5 my-5 text-center">
+  <!--Hero-->
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./assets/img/banner.png" class="d-block mx-lg-auto img-fluid" alt="Banner" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Mural Digital de Avisos</h1>
+        <h3 class="subtitle">Fique por dentro de tudo!</h3>
+        <p class="lead">Oferecemos um moderno mural digital para a comunicação interna entre colaboradores e setores de empresas. 
+          Permite um contato rápido, direto, dinâmico e eficaz. 
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a type="button" href="#mural" class="btn btn-dark btn-lg px-4 me-md-2" id="btn-mural">Experimente</a>
+          <a type="button" href="#" class="btn btn-outline-secondary btn-lg px-4">Contato</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Inserir aviso-->
+  <section class="container px-4 py-5 my-5 text-center avisos" id="mural">
     <h1 class="display-5 fw-bold">Mural de Avisos</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Fique por dentro das novidades, eventos e avisos da nossa empresa.</p>
-      <h3 class="pt-2">Inserir novo aviso</h3>
+      <h3 class="pt-2">Inserir novo aviso no mural</h3>
       <div class="justify-content-sm-center">  
         <div>
           <form>
@@ -44,9 +87,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container">
+  <!--Mural-->
+  <div class="container mural">
     <h2 class="mt-4 pb-3 text-center">Mural de Avisos</h2>
 
     <div class="posts" id="posts">
@@ -54,6 +98,7 @@
     </div>
   </div>
 
+  <!--Modal-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
